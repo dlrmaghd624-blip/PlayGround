@@ -1,0 +1,18 @@
+{
+  "name": "CUBE LAB — 큐브 솔버 & 공식",
+  "short_name": "CUBE LAB",
+  "description": "3D 큐브 솔버, 내 큐브 풀이, 공식 사전과 유튜브 강의.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080a0f",
+  "theme_color": "#080a0f",
+  "lang": "ko",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

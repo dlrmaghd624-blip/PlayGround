@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0d12" />
+    <meta name="description" content="CUBE LAB — 3D 큐브 솔버, 내 큐브 풀이, 공식 사전과 유튜브 강의를 한 곳에서." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>CUBE LAB — 큐브를 푸는 가장 쉬운 방법</title>
+    <script type="module" crossorigin src="/assets/index-GYRoS_so.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CHE8kQqN.css">
+  </head>
+  <body>
+    <div class="ambient ambient-a"></div>
+    <div class="ambient ambient-b"></div>
+    <div id="app" class="app">
+      <header class="topbar" id="topbar">
+        <button class="brand" data-nav="home" aria-label="CUBE LAB 홈">
+          <span class="brand-mark" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </span>
+          <span class="brand-type">CUBE<span>LAB</span></span>
+        </button>
+
+        <nav class="desktop-nav" aria-label="주요 메뉴">
+          <button data-nav="solve">큐브 풀기</button>
+          <button data-nav="mycube">내 큐브</button>
+          <button data-nav="learn">공식</button>
+          <button data-nav="videos">강의</button>
+        </nav>
+
+        <div class="topbar-actions">
+          <div class="solver-pill" id="solverPill" title="솔버 상태">
+            <span class="solver-dot"></span>
+            <span id="solverLabel">솔버 준비 중</span>
+          </div>
+          <button class="icon-btn" id="tiltButton" data-action="toggle-tilt" aria-label="기울기 시점 켜기" aria-pressed="false" title="기울여서 보기">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3Z"/><path d="m8 15 4-6 4 6"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <main id="main" class="main">
+        <section class="view" id="view-home" data-view="home"></section>
+        <section class="view" id="view-solve" data-view="solve" hidden></section>
+        <section class="view" id="view-mycube" data-view="mycube" hidden></section>
+        <section class="view" id="view-learn" data-view="learn" hidden></section>
+        <section class="view" id="view-videos" data-view="videos" hidden></section>
+      </main>
+
+      <nav class="mobile-nav" aria-label="모바일 메뉴">
+        <button data-nav="home" class="active">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v9a2 2 0 0 1-2 2h-4v-6H9v6H5a2 2 0 0 1-2-2Z"/></svg>
+          <span>홈</span>
+        </button>
+        <button data-nav="solve">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 8 4.5v9L12 20l-8-4.5v-9L12 2Z"/><path d="m4 6.5 8 4.5 8-4.5M12 11v9"/></svg>
+          <span>풀기</span>
+        </button>
+        <button data-nav="mycube">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Z"/><path d="M9 4v16M15 4v16M4 9h16M4 15h16"/></svg>
+          <span>내 큐브</span>
+        </button>
+        <button data-nav="learn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5Z"/><path d="M4 5.5v16M8 7h8M8 11h6"/></svg>
+          <span>공식</span>
+        </button>
+        <button data-nav="videos">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m10 9 5 3-5 3Z"/></svg>
+          <span>강의</span>
+        </button>
+      </nav>
+
+      <div class="toast-wrap" id="toastWrap" aria-live="polite"></div>
+      <div id="modalRoot"></div>
+    </div>
+  </body>
+</html>
